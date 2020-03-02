@@ -18,7 +18,7 @@ def index():
 
 @app.route('/login')
 def login():
-    form= LoginForm()
+    form = LoginForm()
     if form.validate_on_submit():
         flash('Login requested for the user {}, remeber me {}'.format(form.username.data,form.remember_me.data))
         return redirect(url_for('index'))
