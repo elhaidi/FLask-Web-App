@@ -10,7 +10,7 @@ from app.models import User
 @app.route('/index')
 @login_required
 def index():
-    user={'username':'Haidi'}
+    # delted the fake user
     posts = [
         {
             'author': {'username': 'John'},
@@ -19,7 +19,7 @@ def index():
         {
             'author': {'username': 'Susan'},
             'body': 'The Avengers movie was so cool!'}]
-    return render_template("index.html",title="Homepage",user=user,posts=posts)
+    return render_template("index.html",title="Homepage",posts=posts)
 
 
 @app.route('/login',methods=['GET','POST'])
