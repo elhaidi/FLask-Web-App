@@ -47,7 +47,7 @@ def logout():
     return redirect(url_for('index'))
 
 
-@app.rout('/register',methods=['GET','POST'])
+@app.route('/register',methods=['GET','POST'])
 def register():
     if current_user.is_authenticated:
         return redirect(url_for('index'))
